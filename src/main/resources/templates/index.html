@@ -1,13 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly-additions.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/patternfly/3.24.0/css/patternfly-additions.min.css"/>
 </head>
 <body>
 <div class="container">
+
+    <nav class="navbar navbar-default navbar-pf" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <h1> My Awesome Blog</h1>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-primary">
+                <li>
+                    <a href="#">First Link</a>
+                </li>
+                <li class="active">
+                    <a href="#">Another Link</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="contentContainer">
+            <div th:utext="${post}"></div>
+    </div>
 
     <!-- Just enjoy various PatternFly components -->
     <div class="alert alert-success">
