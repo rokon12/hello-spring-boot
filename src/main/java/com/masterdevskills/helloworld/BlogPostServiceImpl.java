@@ -2,6 +2,7 @@ package com.masterdevskills.helloworld;
 
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -34,6 +35,7 @@ public class BlogPostServiceImpl implements BlogPostService {
         return null;
     }
 
+    @Cacheable("post")
     @Override
     public Optional<String> findMyAwesomeBlogPostFromDZone() {
         var connection = Jsoup.connect("https://dzone.com/articles/how-to-handle-checked-exception-in-lambda-expressi");
